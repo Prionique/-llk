@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gathery Voting</title>
+    <!-- Include Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        body {
+            background: #43517F;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .main {
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+            align-items: center;
+            box-shadow: 0px 10px 20px 2px;
+            height: 200px;
+        }
+
+        input {
+            margin: 10px;
+            height: 40px;
+            text-align: center;
+            min-width: 200px;
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0px 0px 3px 0px;
+        }
+
+        .password-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: 20px; /* Adjust the left position */
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        button {
+            margin: 10px;
+            height: 40px;
+            min-width: 200px;
+            border-radius: 10px;
+            color: #ffffff;
+            background: #30427f;
+            border: none;
+            box-shadow: 0px 0px 3px 0px;
+            transition: transform 0.1s ease-in-out;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <input type="text" placeholder="Username">
+        <div class="password-container">
+            <input type="password" id="passwordInput" placeholder="Password">
+            <div class="password-toggle" onclick="togglePasswordVisibility()">
+                <!-- Replace the emoji with Font Awesome eye icon -->
+                <i class="fas fa-eye"></i>
+            </div>
+        </div>
+        <button>Sign In</button>
+    </div>
+
+    <!-- Include Font Awesome JavaScript (optional) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
+
+    <script>
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById('passwordInput');
+            passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
+        }
+        alert("ds")
+    </script>
+</body>
+</html>
